@@ -12,6 +12,697 @@
     />
   </head>
   <body>
+    <!-- NAV -->
+    <header class="site-header fu" id="header">
+      <div class="wrap header-bar">
+        <a href="#topo" class="brand" aria-label="Júlio Rocha — início">
+          <span class="brand-mark mono" aria-hidden="true">JR</span>
+          Júlio Rocha
+        </a>
+
+        <nav class="nav-links" aria-label="Principal">
+          <a class="navlink" href="#sobre">Sobre</a>
+          <a class="navlink" href="#projetos">Projetos</a>
+          <a class="navlink" href="#experiencia">Experiência</a>
+          <a class="navlink" href="#servicos">Serviços</a>
+          <a class="navlink" href="#faq">FAQ</a>
+        </nav>
+
+        <a class="btn btn-w btn-sm nav-cta" href="#contato">
+          Vamos conversar
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+        </a>
+
+        <button
+          class="menu-btn"
+          id="menu-btn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          <svg class="menu-ic-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          <svg class="menu-ic-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+
+      <nav class="menu-panel" id="menu-mobile" aria-label="Menu" hidden>
+        <a class="menu-link" href="#sobre">Sobre</a>
+        <a class="menu-link" href="#projetos">Projetos</a>
+        <a class="menu-link" href="#experiencia">Experiência</a>
+        <a class="menu-link" href="#servicos">Serviços</a>
+        <a class="menu-link" href="#faq">FAQ</a>
+        <a class="btn btn-w menu-cta" href="#contato">Vamos conversar</a>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <!-- HERO -->
+      <section id="topo" class="hero grid-bg" aria-labelledby="hero-title">
+        <div class="hero-halo" aria-hidden="true"></div>
+        <div class="wrap two hero-grid">
+          <div class="hero-copy">
+            <span class="badge fu d1"><span class="badge-ic badge-ic--live pulse" aria-hidden="true"></span>Disponível para novos projetos</span>
+            <h1 id="hero-title" class="hero-title grad fu d2">Aplicações web completas, do backend à interface.</h1>
+            <p class="lead hero-lead fu d3">
+              Sou Júlio Rocha, desenvolvedor full stack. Construo sites, sistemas e APIs com Python/Django, Angular e Java/Spring Boot — e integro Inteligência Artificial onde ela gera resultado de verdade.
+            </p>
+            <div class="btn-row cta-row fu d4">
+              <a class="btn btn-w" href="#contato">
+                Iniciar um projeto
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+              </a>
+              <a class="btn btn-g" href="#projetos">Ver projetos</a>
+              <a class="btn btn-g" href="/curriculo-julio-rocha.pdf" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>
+                Currículo (PDF)
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-art fu d5">
+            <div class="art" aria-hidden="true">
+              <div class="ring orbit ring-a"><span class="orbit-dot orbit-dot-a"></span></div>
+              <div class="ring orbit rev ring-b"><span class="orbit-dot orbit-dot-b"></span></div>
+              <span class="glyph g-big glyph-a">{ }</span>
+              <span class="glyph g-mid b glyph-b">&lt;/&gt;</span>
+              <span class="glyph g-sm b glyph-c">;</span>
+            </div>
+            <div class="glass mono term" aria-hidden="true">
+              <div class="dots term-dots"><span></span><span></span><span></span></div>
+              <div><span class="dim">julio@portfolio:~$</span> whoami</div>
+              <div class="term-out"><span class="typing">&gt; Desenvolvedor Full Stack</span></div>
+              <div class="term-out">&gt; Python · Django · Angular · Java</div>
+              <div><span class="dim">julio@portfolio:~$</span> <span class="term-cursor blink"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAIXA DE TECNOLOGIAS -->
+      <section class="strip" aria-labelledby="strip-title">
+        <div class="wrap strip-inner">
+          <h2 id="strip-title" class="strip-title mono">Tecnologias que uso no dia a dia</h2>
+          <div class="marquee-mask">
+            <div class="marquee">
+              <ul class="marquee-group">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>NestJS</li>
+                <li>React</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Tailwind CSS</li>
+                <li>Claude · MCP</li>
+              </ul>
+              <ul class="marquee-group" aria-hidden="true">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>NestJS</li>
+                <li>React</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Tailwind CSS</li>
+                <li>Claude · MCP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre" class="sec" aria-labelledby="sobre-title">
+        <div class="wrap two about-grid">
+          <figure class="card reveal about-photo">
+            <img
+              src="/images/julio.jpg"
+              alt="Foto de Júlio Rocha, desenvolvedor full stack, em preto e branco"
+              width="920"
+              height="1150"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-photo-fade" aria-hidden="true"></div>
+            <figcaption class="glass about-tag">
+              <span class="label-xs">ATUALMENTE</span>
+              <span>Dev Full Stack · Ecomsmart</span>
+            </figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">01</span>Sobre mim</span>
+            <h2 id="sobre-title" class="reveal h2 grad-x">Código limpo com foco no seu negócio.</h2>
+            <p class="lead">
+              Sou estudante de Tecnologia da Informação no IMD/UFRN e desenvolvo aplicações web full stack profissionalmente. No dia a dia crio APIs REST, implemento novas funcionalidades, reviso código e integro sistemas a serviços externos e soluções de IA.
+            </p>
+            <dl class="facts">
+              <div class="card card--sm reveal fact"><dt class="label-xs">FORMAÇÃO</dt><dd>Bacharelado em TI · IMD/UFRN</dd></div>
+              <div class="card card--sm reveal fact"><dt class="label-xs">TÉCNICO</dt><dd>Informática para Internet · IMD/UFRN</dd></div>
+              <div class="card card--sm reveal fact"><dt class="label-xs">MÉTODOS</dt><dd>Scrum · Kanban · Git flow</dd></div>
+              <div class="card card--sm reveal fact"><dt class="label-xs">DEVOPS</dt><dd>Docker · GitLab CI/CD</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="sec projects" aria-labelledby="projetos-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">02</span>Projetos</span>
+            <h2 id="projetos-title" class="reveal h2 grad-x">Projetos que resolvem problemas reais.</h2>
+            <p class="lead">Do app que organiza as compras da família ao cardápio digital que recebe pedidos pelo WhatsApp.</p>
+          </div>
+
+          <!-- Family Ctrl (bento) -->
+          <article class="bento" aria-labelledby="fc-title">
+            <div class="card reveal span2 pad-lg fc-main">
+              <div class="chips">
+                <span class="chip chip--solid">★ Projeto principal</span>
+                <span class="chip mono">Em desenvolvimento ativo</span>
+              </div>
+              <h3 id="fc-title" class="fc-title grad">Family Ctrl</h3>
+              <p class="lead fc-lead">
+                Aplicação web para gestão colaborativa de listas de supermercado em família. Todos acompanham a mesma lista, marcam o que já foi comprado e ninguém esquece o café de novo.
+              </p>
+              <ul class="chips" aria-label="Tecnologias do Family Ctrl">
+                <li class="chip">Java</li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">JPA / Hibernate</li>
+                <li class="chip">API REST</li>
+                <li class="chip">SQL</li>
+                <li class="chip">[Frontend]</li>
+              </ul>
+              <div class="btn-row fc-actions">
+                <!-- TODO: link do site do Family Ctrl -->
+                <a class="btn btn-w" href="#familyctrl-demo">
+                  Ver projeto
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+                </a>
+                <!-- TODO: link do repositório do Family Ctrl -->
+                <a class="btn btn-g" href="#familyctrl-github">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 22v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V22" /></svg>
+                  Código no GitHub
+                </a>
+              </div>
+            </div>
+
+            <div class="card reveal fc-phone-card">
+              <div class="grid-bg grid-layer fc-phone-grid" aria-hidden="true"></div>
+              <div class="phone shot fc-phone">
+                <img
+                  src="/images/family-painel.jpg"
+                  alt="Painel da família no Family Ctrl, no celular"
+                  width="500"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="glass fc-float-tag"><span class="accent-dot" aria-hidden="true"></span>Gastos do mês por família</div>
+            </div>
+
+            <div class="card reveal feature">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5" /><circle cx="17" cy="9" r="2.5" /><path d="M17 14.5c2.6 0 4.5 1.6 4.5 4.5" /></svg>
+              <h4 class="feature-title">Feito para a família inteira</h4>
+              <p class="muted feature-text">Cada família tem seus membros, um administrador e um código de convite para entrar.</p>
+              <div class="avatars" aria-hidden="true">
+                <span class="avatar avatar-1">M</span>
+                <span class="avatar avatar-2">P</span>
+                <span class="avatar avatar-3">J</span>
+                <span class="avatar avatar-add">+</span>
+              </div>
+            </div>
+
+            <div class="card reveal feature">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="2" /><rect x="3" y="14" width="18" height="6" rx="2" /><path d="M7 7h.01M7 17h.01" /></svg>
+              <h4 class="feature-title">Backend robusto</h4>
+              <p class="muted feature-text">API REST em Java com Spring Boot, persistência com JPA/Hibernate e banco relacional.</p>
+              <div class="mono code-snippet" aria-hidden="true">
+                <div><span class="dim">@</span>RestController</div>
+                <div><span class="dim">class</span> ListaController <span class="dim">{ … }</span></div>
+              </div>
+            </div>
+
+            <div class="card reveal feature">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1.5" /><rect x="10" y="4" width="5" height="11" rx="1.5" /><rect x="17" y="4" width="4" height="7" rx="1.5" /></svg>
+              <h4 class="feature-title">Processo profissional</h4>
+              <p class="muted feature-text">Planejado com Scrum/Kanban e boas práticas de Git, como em um time de verdade.</p>
+              <div class="kanban mono" aria-hidden="true">
+                <div class="kanban-col"><span class="dim">A FAZER</span><span class="kanban-item"></span><span class="kanban-item"></span></div>
+                <div class="kanban-col"><span class="dim">FAZENDO</span><span class="kanban-item kanban-item--doing"></span></div>
+                <div class="kanban-col"><span class="dim">FEITO</span><span class="kanban-item kanban-item--done"></span><span class="kanban-item kanban-item--done"></span><span class="kanban-item kanban-item--done"></span></div>
+              </div>
+            </div>
+
+            <div class="card reveal span2 showcase">
+              <div class="grid-bg grid-layer" aria-hidden="true"></div>
+              <div class="showcase-head">
+                <div class="showcase-copy">
+                  <span class="label">NO AR · GITHUB PAGES</span>
+                  <span class="showcase-title">Desktop e celular, com tema claro e escuro.</span>
+                </div>
+                <span class="chip mono">juliowk.github.io</span>
+              </div>
+              <div class="browser showcase-browser">
+                <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div></div>
+                <img
+                  src="/images/family-desktop.jpg"
+                  alt="Página inicial do Family Ctrl no desktop"
+                  width="1800"
+                  height="1013"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="phone hide-sm showcase-phone">
+                <img
+                  src="/images/family-familias.jpg"
+                  alt="Tela de famílias do Family Ctrl no celular"
+                  width="500"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Outros projetos -->
+          <div class="two projects-more">
+            <article class="card reveal project" aria-labelledby="lanche-title">
+              <div class="grid-bg project-stage">
+                <div class="phone phone--sm shot project-phone">
+                  <img
+                    src="/images/lanche-mobile.jpg"
+                    alt="Cardápio do Lanche da Ana no celular"
+                    width="380"
+                    height="760"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <span class="chip mono project-tag">Cliente real</span>
+              </div>
+              <div class="project-body">
+                <h3 id="lanche-title" class="project-title">Lanche da Ana</h3>
+                <p class="muted project-text">
+                  Cardápio digital mobile-first para uma lanchonete: carrinho com pedido direto pelo WhatsApp, pagamento via Pix e painel para a dona editar o cardápio sozinha. Hospedado no GitHub Pages, sem custo de servidor.
+                </p>
+                <ul class="chips" aria-label="Tecnologias do Lanche da Ana">
+                  <li class="chip">SPA</li>
+                  <li class="chip">Mobile-first</li>
+                  <li class="chip">WhatsApp</li>
+                  <li class="chip">Pix</li>
+                  <li class="chip">GitHub Pages</li>
+                </ul>
+                <div class="project-links">
+                  <!-- TODO: links do site e do repositório do Lanche da Ana -->
+                  <a class="text-link" href="#lanche-demo">
+                    Ver site
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+                  </a>
+                  <a class="text-link muted" href="#lanche-github">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card reveal project" aria-labelledby="kaka-title">
+              <div class="grid-bg project-stage">
+                <div class="phone phone--sm shot project-phone">
+                  <img
+                    src="/images/kaka-mobile.jpg"
+                    alt="Catálogo da Kaká Trufas no celular"
+                    width="380"
+                    height="760"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <span class="chip mono project-tag">Cliente real</span>
+              </div>
+              <div class="project-body">
+                <h3 id="kaka-title" class="project-title">Kaká Trufas</h3>
+                <p class="muted project-text">
+                  Catálogo de trufas artesanais: o cliente escolhe os sabores, monta a caixinha e envia o pedido pronto pelo WhatsApp, sem cadastro. O checkout separa entrega na escola e entrega em casa, e a dona controla o estoque por uma API REST com login protegido.
+                </p>
+                <ul class="chips" aria-label="Tecnologias da Kaká Trufas">
+                  <li class="chip">Mobile-first</li>
+                  <li class="chip">React</li>
+                  <li class="chip">TypeScript</li>
+                  <li class="chip">NestJS</li>
+                  <li class="chip">PostgreSQL</li>
+                  <li class="chip">JWT</li>
+                  <li class="chip">WhatsApp</li>
+                </ul>
+                <div class="project-links">
+                  <a class="text-link" href="https://juliowk.github.io/Trufas/" target="_blank" rel="noopener">
+                    Ver site
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+                  </a>
+                  <a class="text-link muted" href="https://github.com/Juliowk/Trufas" target="_blank" rel="noopener">Frontend</a>
+                  <a class="text-link muted" href="https://github.com/Juliowk/Trufas-API" target="_blank" rel="noopener">API</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAJETÓRIA -->
+      <section class="numbers" aria-labelledby="trajetoria-title">
+        <div class="wrap two numbers-grid">
+          <div class="numbers-copy">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">03</span>Trajetória</span>
+            <h2 id="trajetoria-title" class="reveal h2 grad-x">Experiência de mercado, não só de sala de aula.</h2>
+            <p class="lead">Desde 2024 desenvolvendo software em empresas e em pesquisa na UFRN — do e-commerce ao backend com IA.</p>
+          </div>
+          <dl class="tilt-wrap">
+            <div class="card tilt" style="--x: 4%; --y: 30px; --w: 230px; --rot: -10deg">
+              <dt class="chrome-text tilt-num">2+</dt>
+              <dd class="muted tilt-text">anos desenvolvendo software</dd>
+            </div>
+            <div class="card tilt" style="--x: 38%; --y: 0px; --w: 230px; --rot: 8deg">
+              <dt class="chrome-text tilt-num">3</dt>
+              <dd class="muted tilt-text">experiências profissionais</dd>
+            </div>
+            <div class="card tilt" style="--x: 22%; --y: 190px; --w: 250px; --rot: -4deg">
+              <dt class="chrome-text tilt-num">360°</dt>
+              <dd class="muted tilt-text">backend, frontend, banco e deploy</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- EXPERIÊNCIA -->
+      <section id="experiencia" class="sec" aria-labelledby="experiencia-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">04</span>Experiência</span>
+            <h2 id="experiencia-title" class="reveal h2 grad-x">Onde já entreguei resultado.</h2>
+          </div>
+          <ol class="jobs">
+            <li class="card reveal two job">
+              <div class="job-head">
+                <span class="label">JUL 2026 — ATUAL</span>
+                <h3 class="job-company">Ecomsmart</h3>
+                <span class="muted">Desenvolvedor de Software · Estágio</span>
+              </div>
+              <div class="job-body">
+                <p class="muted job-text">Aplicações web full stack: APIs e backend em Python/Django, interfaces em Angular, TypeScript e Tailwind CSS, integração com serviços externos e soluções de Inteligência Artificial, revisão de código e deploy com Docker e GitLab CI/CD.</p>
+                <ul class="chips" aria-label="Tecnologias">
+                  <li class="chip">Django</li>
+                  <li class="chip">Angular</li>
+                  <li class="chip">IA</li>
+                  <li class="chip">Docker</li>
+                  <li class="chip">CI/CD</li>
+                </ul>
+              </div>
+            </li>
+            <li class="card reveal two job">
+              <div class="job-head">
+                <span class="label">SET 2024 — FEV 2025</span>
+                <h3 class="job-company">Laboratório LEIA · UFRN</h3>
+                <span class="muted">Iniciação Científica</span>
+              </div>
+              <div class="job-body">
+                <p class="muted job-text">Manutenção e desenvolvimento de aplicações para o modelo EV3 Lego, com foco em lógica de programação e boas práticas de desenvolvimento.</p>
+                <ul class="chips" aria-label="Áreas">
+                  <li class="chip">Robótica</li>
+                  <li class="chip">Pesquisa</li>
+                </ul>
+              </div>
+            </li>
+            <li class="card reveal two job">
+              <div class="job-head">
+                <span class="label">JAN 2024 — JUN 2024</span>
+                <h3 class="job-company">CR84 Publicidade</h3>
+                <span class="muted">Desenvolvimento de Software</span>
+              </div>
+              <div class="job-body">
+                <p class="muted job-text">Desenvolvimento de um e-commerce: API em Node.js com MySQL, Knex, Multer e Cookie-parser, além de recursos de exibição dinâmica.</p>
+                <ul class="chips" aria-label="Tecnologias">
+                  <li class="chip">Node.js</li>
+                  <li class="chip">MySQL</li>
+                  <li class="chip">E-commerce</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section class="sec stack" aria-labelledby="stack-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">05</span>Stack</span>
+            <h2 id="stack-title" class="reveal h2 grad-x">Ferramentas certas para cada etapa.</h2>
+          </div>
+          <div class="three stack-grid">
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">BACKEND</h3>
+              <ul class="chips">
+                <li class="chip">Python</li>
+                <li class="chip">Django</li>
+                <li class="chip">Django REST Framework</li>
+                <li class="chip">Java</li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">NestJS</li>
+              </ul>
+            </div>
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">FRONTEND</h3>
+              <ul class="chips">
+                <li class="chip">Angular</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">React</li>
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">DADOS &amp; APIs</h3>
+              <ul class="chips">
+                <li class="chip">PostgreSQL</li>
+                <li class="chip">MySQL</li>
+                <li class="chip">Redis</li>
+                <li class="chip">REST</li>
+                <li class="chip">OpenAPI</li>
+              </ul>
+            </div>
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">INTELIGÊNCIA ARTIFICIAL</h3>
+              <ul class="chips">
+                <li class="chip">APIs/SDKs de IA</li>
+                <li class="chip">Claude</li>
+                <li class="chip">MCP</li>
+              </ul>
+            </div>
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">DEVOPS</h3>
+              <ul class="chips">
+                <li class="chip">Docker</li>
+                <li class="chip">GitLab CI/CD</li>
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+              </ul>
+            </div>
+            <div class="card reveal stack-card">
+              <h3 class="label stack-label">MÉTODOS</h3>
+              <ul class="chips">
+                <li class="chip">Scrum</li>
+                <li class="chip">Kanban</li>
+                <li class="chip">Code review</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section id="servicos" class="sec grid-bg services" aria-labelledby="servicos-title">
+        <div class="wrap">
+          <div class="sec-head sec-head--center">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">06</span>Serviços</span>
+            <h2 id="servicos-title" class="reveal h2 grad">Como posso ajudar o seu negócio.</h2>
+            <p class="lead">Escolha o ponto de partida. Cada projeto recebe uma proposta com escopo, prazo e valor definidos.</p>
+          </div>
+          <div class="two services-grid">
+            <article class="card reveal service">
+              <span class="label">PRESENÇA ONLINE</span>
+              <h3 class="service-title">Site ou landing page</h3>
+              <p class="muted service-text">Para negócios que precisam aparecer bem e converter visitas em contatos.</p>
+              <ul class="service-list">
+                <li>Design responsivo</li>
+                <li>Botão de WhatsApp e formulário</li>
+                <li>Publicação inclusa</li>
+              </ul>
+              <a class="btn btn-g service-cta" href="#contato">Solicitar orçamento</a>
+            </article>
+            <article class="card reveal service service--featured">
+              <span class="service-kicker mono">MAIS PROCURADO</span>
+              <h3 class="service-title">Sistema web sob medida</h3>
+              <p class="service-text">Cardápios digitais, painéis administrativos, catálogos e ferramentas internas que automatizam a sua rotina.</p>
+              <ul class="service-list">
+                <li>Login e painel de gestão</li>
+                <li>Banco de dados e API</li>
+                <li>Entregas por etapas</li>
+              </ul>
+              <a class="btn btn-dark service-cta" href="#contato">Solicitar orçamento</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="sec" aria-labelledby="faq-title">
+        <div class="wrap two faq-grid">
+          <div class="faq-intro">
+            <span class="badge"><span class="badge-ic" aria-hidden="true">07</span>FAQ</span>
+            <h2 id="faq-title" class="reveal h2 grad-x">Dúvidas frequentes.</h2>
+            <p class="lead">Não encontrou o que procurava? Me chame no WhatsApp e respondo pessoalmente.</p>
+          </div>
+          <div class="faq-list" id="faq-list">
+            <div class="card card--sm reveal faq-item is-open">
+              <h3 class="faq-h">
+                <button class="faq-q" id="faq-q-1" type="button" aria-expanded="true" aria-controls="faq-a-1">
+                  Você aceita projetos freelance?
+                  <span class="faq-icon mono" aria-hidden="true">−</span>
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+                <div class="faq-panel-inner">
+                  <p class="muted faq-a">Sim. Aceito projetos com escopo e prazo bem definidos. [Ajuste conforme sua disponibilidade.]</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--sm reveal faq-item">
+              <h3 class="faq-h">
+                <button class="faq-q" id="faq-q-2" type="button" aria-expanded="false" aria-controls="faq-a-2">
+                  Quanto custa um projeto?
+                  <span class="faq-icon mono" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+                <div class="faq-panel-inner">
+                  <p class="muted faq-a">Depende do escopo. Depois de uma conversa rápida sobre o que você precisa, envio uma proposta com valor e prazo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--sm reveal faq-item">
+              <h3 class="faq-h">
+                <button class="faq-q" id="faq-q-3" type="button" aria-expanded="false" aria-controls="faq-a-3">
+                  Em quanto tempo fica pronto?
+                  <span class="faq-icon mono" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+                <div class="faq-panel-inner">
+                  <p class="muted faq-a">Um site simples leva menos tempo que um sistema com login e painel. O prazo exato vem definido na proposta. [Prazo médio]</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--sm reveal faq-item">
+              <h3 class="faq-h">
+                <button class="faq-q" id="faq-q-4" type="button" aria-expanded="false" aria-controls="faq-a-4">
+                  Você publica e mantém o site?
+                  <span class="faq-icon mono" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+                <div class="faq-panel-inner">
+                  <p class="muted faq-a">Sim. Publico o projeto e podemos combinar manutenção e ajustes depois da entrega.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--sm reveal faq-item">
+              <h3 class="faq-h">
+                <button class="faq-q" id="faq-q-5" type="button" aria-expanded="false" aria-controls="faq-a-5">
+                  Como acompanho o andamento?
+                  <span class="faq-icon mono" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="faq-panel" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+                <div class="faq-panel-inner">
+                  <p class="muted faq-a">Trabalho com entregas curtas e mostro o progresso com frequência, para você validar cada etapa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="contact" aria-labelledby="contato-title">
+        <div class="wrap">
+          <div class="card reveal grid-bg contact-card">
+            <span class="glyph g-mid contact-glyph-a" aria-hidden="true">{ }</span>
+            <span class="glyph g-sm b contact-glyph-b" aria-hidden="true">&lt;/&gt;</span>
+            <span class="badge contact-rel"><span class="badge-ic badge-ic--live pulse" aria-hidden="true"></span>Respondo em até [24h]</span>
+            <h2 id="contato-title" class="grad reveal contact-title">Tem um projeto em mente? Vamos tirar do papel.</h2>
+            <p class="lead contact-rel contact-lead">Conte o que você precisa. Eu retorno com ideias, prazo e uma proposta clara.</p>
+            <div class="btn-row contact-actions">
+              <a class="btn btn-w" href="https://wa.me/5584988510505" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z" /></svg>
+                Chamar no WhatsApp
+              </a>
+              <a class="btn btn-g" href="mailto:julioeliasdesousarocha.wk@gmail.com">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+                Enviar e-mail
+              </a>
+            </div>
+            <div class="muted contact-info">
+              <span class="mono">julioeliasdesousarocha.wk@gmail.com</span>
+              <span class="mono">(84) 98851-0505</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="wrap foot">
+        <div class="foot-col">
+          <span class="foot-name">Júlio Rocha</span>
+          <span class="muted foot-about">Desenvolvedor full stack. Sites, sistemas web, APIs e integrações com IA.</span>
+        </div>
+        <nav class="foot-col foot-col--links" aria-labelledby="foot-nav-title">
+          <h2 id="foot-nav-title" class="label foot-label">NAVEGAÇÃO</h2>
+          <a class="navlink" href="#sobre">Sobre</a>
+          <a class="navlink" href="#projetos">Projetos</a>
+          <a class="navlink" href="#servicos">Serviços</a>
+          <a class="navlink" href="#contato">Contato</a>
+        </nav>
+        <div class="foot-col foot-col--links">
+          <h2 class="label foot-label">REDES</h2>
+          <a class="navlink" href="https://github.com/Juliowk" target="_blank" rel="noopener">GitHub</a>
+          <a class="navlink" href="https://www.linkedin.com/in/j%C3%BAlio-elias-desenvolvedor" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="navlink" href="mailto:julioeliasdesousarocha.wk@gmail.com">E-mail</a>
+        </div>
+      </div>
+      <div class="wrap foot-bottom">
+        <span class="dim">© <span id="ano">2026</span> Júlio Rocha. Todos os direitos reservados.</span>
+        <a class="dim" href="#topo">Voltar ao topo ↑</a>
+      </div>
+      <div class="chrome-text shine-text foot-mark" aria-hidden="true">JÚLIO ROCHA</div>
+    </footer>
+
+    <a class="fab" href="https://wa.me/5584988510505" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z" /></svg>
+    </a>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
