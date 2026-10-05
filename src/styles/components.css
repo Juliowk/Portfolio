@@ -1,1 +1,272 @@
-/* components */
+/* Componentes reutilizáveis: badges, chips, cards, glass, botões e molduras. */
+
+/* Badge (rótulo de seção e status) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px 5px 5px;
+  border: 1px solid var(--line-3);
+  border-radius: var(--radius-pill);
+  background: var(--fill-1);
+  font-size: 13px;
+  color: var(--text-badge);
+}
+
+.badge-ic {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--text-on-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.badge-ic--live {
+  background: var(--accent);
+}
+
+.badge-ic--live::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+/* Chip (tecnologias e etiquetas) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-3);
+  background: var(--fill-2);
+  font-size: 13px;
+  color: var(--text-chip);
+}
+
+.chip--solid {
+  background: var(--text);
+  color: var(--text-on-light);
+  border-color: var(--text);
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Card */
+.card {
+  background: var(--grad-card);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-inset);
+}
+
+.card--sm {
+  border-radius: var(--radius-md);
+}
+
+/* Glass (terminal, etiquetas flutuantes) */
+.glass {
+  background: var(--surface-glass);
+  border: 1px solid var(--line-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-w {
+  background: var(--text);
+  color: var(--text-on-light);
+  border: 1px solid var(--text-strong);
+  box-shadow: 0 0 0 4px var(--fill-3);
+}
+
+.btn-w:hover {
+  color: var(--text-on-light);
+  background: var(--text-strong);
+}
+
+.btn-g {
+  background: var(--fill-2);
+  color: var(--text);
+  border: 1px solid var(--line-6);
+}
+
+.btn-dark {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--bg);
+}
+
+.btn-dark:hover {
+  color: var(--text-strong);
+}
+
+.btn-sm {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Link de texto com seta (cards de projeto) */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+
+/* Três pontinhos de janela */
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--frame-dot);
+}
+
+/* Moldura de celular */
+.phone {
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  border: 7px solid var(--frame);
+  border-bottom: none;
+  overflow: hidden;
+  background: var(--surface-3);
+}
+
+.phone--sm {
+  border-radius: 28px 28px 0 0;
+  border-width: 6px;
+  background: var(--surface-4);
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Moldura de navegador */
+.browser {
+  position: relative;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  border: 1px solid var(--line-5);
+  border-bottom: none;
+  overflow: hidden;
+  background: var(--surface-3);
+  box-shadow: 0 -30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.browser-bar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: var(--surface-bar);
+  border-bottom: 1px solid var(--line-2);
+}
+
+.browser img {
+  width: 100%;
+  height: auto;
+}
+
+/* Cabeçalho de seção (badge + título + texto) */
+.sec-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.sec-head--center {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* Símbolos cromados decorativos */
+.glyph {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  background-image: var(--grad-glyph);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 22px 40px rgba(255, 255, 255, 0.1));
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+.g-big {
+  font-size: 240px;
+}
+
+.g-mid {
+  font-size: 118px;
+}
+
+.g-sm {
+  font-size: 72px;
+}
+
+/* Órbitas */
+.ring {
+  position: absolute;
+  border: 1px solid var(--fill-5);
+  border-radius: 50%;
+}
+
+.orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text);
+  box-shadow: var(--glow-dot);
+}
