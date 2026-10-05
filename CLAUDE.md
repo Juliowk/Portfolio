@@ -41,5 +41,5 @@ O arquivo de referência não entra no build.
 - Nenhuma cor ou fonte solta: tudo vem de `src/styles/tokens.css`
 - Animar só `transform`, `opacity` e `filter`; respeitar `prefers-reduced-motion`
 - Links externos com `target="_blank" rel="noopener"`
-- Marcadores entre colchetes (ex.: `[24h]`, `[Frontend]`) são conteúdo pendente que o Júlio vai revisar — não remover sem pedido
+- Conteúdo pendente vai entre colchetes (ex.: `[Prazo]`) para o Júlio revisar; não inventar links nem dados
 - Commits no padrão Conventional Commits (`feat:`, `fix:`, `chore:`, `style:`, `docs:`…)
