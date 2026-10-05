@@ -1,1 +1,179 @@
-/* responsive */
+/* Regras do artboard Mobile (≤ 900px). */
+@media (max-width: 900px) {
+  :root {
+    --gutter: 20px;
+    --sec-pad: 84px;
+  }
+
+  /* Nav */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+
+  /* Grades em uma coluna */
+  .two,
+  .three,
+  .bento,
+  .foot,
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .span2 {
+    grid-column: auto;
+  }
+
+  .pad-lg {
+    padding: 28px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 56px;
+  }
+
+  .cta-row .btn {
+    flex: 1 1 100%;
+  }
+
+  .hero-art {
+    height: 330px;
+    margin-top: 8px;
+  }
+
+  .art {
+    transform: scale(0.58);
+  }
+
+  .term {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .g-sm {
+    font-size: 48px;
+  }
+
+  /* Sobre */
+  .about-photo {
+    max-width: none;
+  }
+
+  /* Vitrine do Family Ctrl */
+  .showcase-browser {
+    width: 100%;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  /* Trajetória: grade 2 + 1 sem rotação */
+  .tilt-wrap {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tilt,
+  .card.tilt:hover {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    transform: none;
+    padding: 20px;
+  }
+
+  .tilt-num {
+    font-size: 44px;
+  }
+
+  .tilt:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .numbers-grid {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  /* Experiência */
+  .job {
+    padding: 28px;
+  }
+
+  /* Contato */
+  .contact {
+    padding-bottom: 96px;
+  }
+
+  .contact-card {
+    padding: 48px 20px;
+  }
+
+  .contact-glyph-a {
+    font-size: 64px;
+    right: 4%;
+    top: 20px;
+    opacity: 0.5;
+  }
+
+  .contact-glyph-b {
+    font-size: 40px;
+    bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .contact-info {
+    font-size: 13px;
+  }
+
+  /* Rodapé */
+  .foot-mark {
+    margin-bottom: -6px;
+  }
+
+  /* Botão flutuante de WhatsApp */
+  .fab {
+    display: flex;
+    bottom: calc(18px + env(safe-area-inset-bottom));
+  }
+
+  /* Alvos de toque com no mínimo 44px */
+  .foot-col--links a,
+  .foot-bottom a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .foot-col--links .navlink::after {
+    bottom: 8px;
+  }
+}
+
+/* Telas bem estreitas (≤ 360px) */
+@media (max-width: 360px) {
+  .project-body,
+  .service {
+    padding: 24px;
+  }
+
+  .fc-main.pad-lg {
+    padding: 24px;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+}

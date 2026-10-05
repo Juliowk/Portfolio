@@ -1035,11 +1035,13 @@
 .foot-mark {
   background-image: var(--grad-wordmark);
   text-align: center;
-  font-size: clamp(64px, 15.5vw, 230px);
+  font-size: min(15.5vw, 230px);
   font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 0.8;
-  margin-top: 36px;
+  /* espaço para o acento do Ú receber o degradê */
+  padding-top: 0.14em;
+  margin-top: calc(36px - 0.14em);
   margin-bottom: -18px;
   white-space: nowrap;
   user-select: none;
