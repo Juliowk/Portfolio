@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Portfólio — Júlio Rocha</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0A0A}
+a{color:#F5F5F5;text-decoration:none}a:hover{color:#FFFFFF}
+.jr{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;color:#F5F5F5;background:#0A0A0A;-webkit-font-smoothing:antialiased;overflow:hidden}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.mono{font-family:'Geist Mono',ui-monospace,monospace}
+.grad{background:linear-gradient(180deg,#FFFFFF 0%,#F2F2F2 45%,#7A7A7A 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-x{background:linear-gradient(90deg,#FFFFFF 0%,#FFFFFF 35%,#6E6E6E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chrome-text{background:linear-gradient(180deg,#FFFFFF 0%,#BDBDBD 30%,#4A4A4A 55%,#D9D9D9 75%,#7A7A7A 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:#C9C9C9}
+.badge-ic{width:22px;height:22px;border-radius:50%;background:#F5F5F5;color:#0A0A0A;display:flex;align-items:center;justify-content:center}
+.card{background:linear-gradient(180deg,#161616 0%,#0E0E0E 100%);border:1px solid rgba(255,255,255,.08);border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06);box-sizing:border-box}
+.glass{background:rgba(30,30,30,.72);border:1px solid rgba(255,255,255,.12);border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;font-size:15px;font-weight:500;box-sizing:border-box;font-family:inherit;cursor:pointer;white-space:nowrap}
+.btn-w{background:#F5F5F5;color:#0A0A0A;border:1px solid #FFFFFF;box-shadow:0 0 0 4px rgba(255,255,255,.06)}
+.btn-w:hover{color:#0A0A0A;background:#FFFFFF}
+.btn-g{background:rgba(255,255,255,.04);color:#F5F5F5;border:1px solid rgba(255,255,255,.16)}
+.grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px}
+.sec{padding:120px 0}
+.h2{font-size:clamp(36px,5vw,60px);line-height:1.04;letter-spacing:-0.035em;font-weight:500;margin:22px 0 18px}
+.lead{color:#A3A3A3;font-size:17px;line-height:1.6;max-width:580px;margin:0}
+.chip{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);font-size:13px;color:#D4D4D4}
+.muted{color:#A3A3A3}
+.dim{color:#8A8A8A}
+.glyph{font-family:'Geist Mono',ui-monospace,monospace;font-weight:500;line-height:1;letter-spacing:-0.08em;background:linear-gradient(120deg,#5A5A5A 0%,#FFFFFF 18%,#9A9A9A 32%,#2B2B2B 48%,#E8E8E8 62%,#8C8C8C 78%,#FFFFFF 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 22px 40px rgba(255,255,255,.10));animation:floaty 8s ease-in-out infinite,shine 7s linear infinite;white-space:nowrap;user-select:none}
+.glyph.b{animation-duration:10s,9s;animation-delay:-4s,-2s}
+.g-big{font-size:240px}.g-mid{font-size:118px}.g-sm{font-size:72px}
+.ring{position:absolute;border:1px solid rgba(255,255,255,.09);border-radius:50%;box-sizing:border-box}
+.orbit{animation:spin 36s linear infinite}.orbit.rev{animation-duration:54s;animation-direction:reverse}
+.orbit-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:#F5F5F5;box-shadow:0 0 14px 2px rgba(255,255,255,.7)}
+.art{position:absolute;inset:0;transform-origin:top right}
+@keyframes fu{from{opacity:0;transform:translateY(26px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(calc(var(--r,0deg) + 2deg))}}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:220% 50%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes type{from{width:0}to{width:26ch}}
+@keyframes reveal{from{opacity:0;transform:translateY(48px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.fu{animation:fu 1s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.44s}.d5{animation-delay:.7s}
+.pulse{animation:pulse 2s ease-out infinite}
+.blink{animation:blink 1s steps(1) infinite}
+.typing{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;animation:type 1.4s steps(26) 1s both}
+.marquee-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee{display:flex;width:max-content;gap:56px;padding-right:56px;animation:marquee 34s linear infinite}
+.marquee-mask:hover .marquee{animation-play-state:paused}
+.shine-text{background-size:220% 100%!important;animation:shine 8s linear infinite}
+.card{transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s,box-shadow .45s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 30px 70px rgba(0,0,0,.55)}
+.btn{transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{transition:transform .25s}.btn:hover svg{transform:translate(2px,-2px)}
+.btn-w:hover{box-shadow:0 0 0 6px rgba(255,255,255,.1),0 12px 30px rgba(255,255,255,.12)}
+.btn-g:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.08)}
+.chip{transition:background .25s,border-color .25s,color .25s}.chip:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.24);color:#FFFFFF}
+.navlink{position:relative;transition:color .2s}.navlink:hover{color:#FFFFFF}
+.navlink::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:#F5F5F5;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.navlink:hover::after{transform:scaleX(1)}
+.shot{overflow:hidden}.shot img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.card:hover .shot img{transform:scale(1.04)}
+.tilt{transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .5s}
+.tilt:hover{border-color:rgba(255,255,255,.22)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#F5F5F5;align-items:center;justify-content:center;cursor:pointer}
+.menu-panel{animation:drop .3s ease both}
+.fab{display:none;position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#F5F5F5;color:#0A0A0A;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.55)}
+.fab:hover{color:#0A0A0A}
+@supports (animation-timeline: view()){
+.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 24%}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.navlink{font-size:14px;color:#BDBDBD}
+@media (max-width:900px){
+.nav-links{display:none!important}
+.two,.bento,.three,.foot{grid-template-columns:minmax(0,1fr)!important}
+.span2{grid-column:auto!important}
+.sec{padding:84px 0}
+.hero-art{height:330px!important;margin-top:8px}
+.art{transform:scale(.58)}
+.term{left:0!important;bottom:0!important;width:100%!important;max-width:330px}
+.hide-sm{display:none!important}
+.browser{width:100%!important}
+.wrap{padding:0 20px}
+.hero{padding:48px 0 56px!important}
+.nav-cta{display:none!important}
+.menu-btn{display:inline-flex}
+.cta-row .btn{flex:1 1 100%}
+.tilt-wrap{height:auto!important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tilt{position:relative!important;left:auto!important;top:auto!important;width:auto!important;transform:none!important;padding:20px!important}
+.tilt .chrome-text{font-size:44px!important}
+.tilt:last-child{grid-column:1 / -1}
+.pad-lg{padding:28px!important}
+.fab{display:flex}
+.g-sm{font-size:48px}
+.foot-mark{margin-bottom:-6px!important}
+}
+</style>
+</helmet>
+
+<div class="jr">
+
+
+<!-- NAV -->
+<header class="fu" style="position: relative; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(10,10,10,.7)">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px">
+<a href="#topo" style="display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.02em; font-size: 17px">
+<span style="width: 32px; height: 32px; border-radius: 9px; background: #F5F5F5; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700" class="mono">JR</span>
+Júlio Rocha
+</a>
+<nav class="nav-links" style="display: flex; gap: 32px">
+<a class="navlink" href="#sobre">Sobre</a>
+<a class="navlink" href="#projetos">Projetos</a>
+<a class="navlink" href="#experiencia">Experiência</a>
+<a class="navlink" href="#servicos">Serviços</a>
+<a class="navlink" href="#faq">FAQ</a>
+</nav>
+<a class="btn btn-w nav-cta" href="#contato" style="min-height: 40px; padding: 0 16px; font-size: 14px">Vamos conversar
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+<button class="menu-btn" onClick="{{toggleMenu}}" aria-label="Abrir menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{menuIcon}}"></path></svg></button>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{false}}">
+<div class="menu-panel" style="position: absolute; left: 0; right: 0; top: 76px; background: rgba(12,12,12,.97); border-bottom: 1px solid rgba(255,255,255,.08); padding: 12px 20px 24px; display: flex; flex-direction: column">
+<a href="#sobre" onClick="{{closeMenu}}" style="min-height: 52px; display: flex; align-items: center; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.06)">Sobre</a>
+<a href="#projetos" onClick="{{closeMenu}}" style="min-height: 52px; display: flex; align-items: center; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.06)">Projetos</a>
+<a href="#experiencia" onClick="{{closeMenu}}" style="min-height: 52px; display: flex; align-items: center; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.06)">Experiência</a>
+<a href="#servicos" onClick="{{closeMenu}}" style="min-height: 52px; display: flex; align-items: center; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.06)">Serviços</a>
+<a href="#faq" onClick="{{closeMenu}}" style="min-height: 52px; display: flex; align-items: center; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.06)">FAQ</a>
+<a class="btn btn-w" href="#contato" onClick="{{closeMenu}}" style="margin-top: 20px; min-height: 52px">Vamos conversar</a>
+</div>
+</sc-if>
+</header>
+
+<!-- HERO -->
+<section id="topo" class="grid-bg hero" style="position: relative; padding: 96px 0 72px; overflow: hidden">
+<div style="position: absolute; left: 50%; top: -200px; width: 900px; height: 700px; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(255,255,255,.09), transparent); pointer-events: none"></div>
+<div class="wrap two" style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 26px">
+<span class="badge fu d1"><span class="badge-ic pulse" style="background: {{accent}}"><span style="width: 8px; height: 8px; border-radius: 50%; background: #0A0A0A"></span></span>Disponível para novos projetos</span>
+<h1 class="grad fu d2" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 500">Aplicações web completas, do backend à interface.</h1>
+<p class="lead fu d3" style="font-size: 18px">Sou Júlio Rocha, desenvolvedor full stack. Construo sites, sistemas e APIs com Python/Django, Angular e Java/Spring Boot — e integro Inteligência Artificial onde ela gera resultado de verdade.</p>
+<div class="cta-row fu d4" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-w" href="#contato">Iniciar um projeto
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+<a class="btn btn-g" href="#projetos">Ver projetos</a>
+<a class="btn btn-g" href="#curriculo">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Currículo (PDF)</a>
+</div>
+</div>
+
+<div class="hero-art fu d5" style="position: relative; height: 480px">
+<div class="art" aria-hidden="true">
+<div class="ring orbit" style="width: 460px; height: 460px; right: -40px; top: 0"><span class="orbit-dot" style="top: -4px; left: 50%"></span></div>
+<div class="ring orbit rev" style="width: 320px; height: 320px; right: 30px; top: 70px; border-style: dashed; border-color: rgba(255,255,255,.12)"><span class="orbit-dot" style="bottom: 40px; left: 18px; width: 6px; height: 6px"></span></div>
+<span class="glyph g-big" style="--r: -8deg; position: absolute; right: 70px; top: 70px">{ }</span>
+<span class="glyph g-mid b" style="--r: 12deg; position: absolute; right: -10px; top: 300px">&lt;/&gt;</span>
+<span class="glyph g-sm b" style="--r: -14deg; position: absolute; right: 380px; top: 20px">;</span>
+</div>
+<div class="glass mono term" style="position: absolute; left: 10px; bottom: 30px; width: 360px; padding: 18px 20px; font-size: 13px; line-height: 1.8">
+<div style="display: flex; gap: 6px; margin-bottom: 12px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span></div>
+<div><span class="dim">julio@portfolio:~$</span> whoami</div>
+<div style="color: #E5E5E5"><span class="typing">&gt; Desenvolvedor Full Stack</span></div>
+<div style="color: #E5E5E5">&gt; Python · Django · Angular · Java</div>
+<div><span class="dim">julio@portfolio:~$</span> <span class="blink" style="display: inline-block; width: 8px; height: 15px; vertical-align: middle; background: {{accent}}"></span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STACK STRIP -->
+<section style="border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); padding: 30px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 18px; align-items: center">
+<span class="mono dim" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase">Tecnologias que uso no dia a dia</span>
+<div class="marquee-mask" style="width: 100%">
+<div class="marquee" style="font-size: 18px; font-weight: 500; color: #8F8F8F; letter-spacing: -0.01em; white-space: nowrap"><span>Python</span><span style="color: #3A3A3A">✦</span><span>Django</span><span style="color: #3A3A3A">✦</span><span>Angular</span><span style="color: #3A3A3A">✦</span><span>TypeScript</span><span style="color: #3A3A3A">✦</span><span>Java</span><span style="color: #3A3A3A">✦</span><span>Spring Boot</span><span style="color: #3A3A3A">✦</span><span>NestJS</span><span style="color: #3A3A3A">✦</span><span>React</span><span style="color: #3A3A3A">✦</span><span>PostgreSQL</span><span style="color: #3A3A3A">✦</span><span>Docker</span><span style="color: #3A3A3A">✦</span><span>Tailwind CSS</span><span style="color: #3A3A3A">✦</span><span>Claude · MCP</span><span style="color: #3A3A3A">✦</span><span>Python</span><span style="color: #3A3A3A">✦</span><span>Django</span><span style="color: #3A3A3A">✦</span><span>Angular</span><span style="color: #3A3A3A">✦</span><span>TypeScript</span><span style="color: #3A3A3A">✦</span><span>Java</span><span style="color: #3A3A3A">✦</span><span>Spring Boot</span><span style="color: #3A3A3A">✦</span><span>NestJS</span><span style="color: #3A3A3A">✦</span><span>React</span><span style="color: #3A3A3A">✦</span><span>PostgreSQL</span><span style="color: #3A3A3A">✦</span><span>Docker</span><span style="color: #3A3A3A">✦</span><span>Tailwind CSS</span><span style="color: #3A3A3A">✦</span><span>Claude · MCP</span><span style="color: #3A3A3A">✦</span></div>
+</div>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sec">
+<div class="wrap two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center">
+<div class="card reveal" style="position: relative; aspect-ratio: 4 / 5; max-width: 460px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<img src="/_blob/a2eda2cd5af52e4444451a892f74db00" alt="Foto de Júlio Rocha" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(1) contrast(1.08) brightness(0.95)">
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(10,10,10,.75) 100%)"></div>
+<div class="glass" style="position: absolute; left: 20px; bottom: 20px; padding: 12px 16px; font-size: 13px; display: flex; flex-direction: column; gap: 2px">
+<span class="dim mono" style="font-size: 11px">ATUALMENTE</span>
+<span>Dev Full Stack · Ecomsmart</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">01</span>Sobre mim</span>
+<h2 class="reveal h2 grad-x">Código limpo com foco no seu negócio.</h2>
+<p class="lead">Sou estudante de Tecnologia da Informação no IMD/UFRN e desenvolvo aplicações web full stack profissionalmente. No dia a dia crio APIs REST, implemento novas funcionalidades, reviso código e integro sistemas a serviços externos e soluções de IA.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; width: 100%; margin-top: 32px">
+<div class="card reveal" style="padding: 18px; border-radius: 14px"><div class="dim mono" style="font-size: 11px">FORMAÇÃO</div><div style="margin-top: 6px; font-size: 15px">Bacharelado em TI · IMD/UFRN</div></div>
+<div class="card reveal" style="padding: 18px; border-radius: 14px"><div class="dim mono" style="font-size: 11px">TÉCNICO</div><div style="margin-top: 6px; font-size: 15px">Informática para Internet · IMD/UFRN</div></div>
+<div class="card reveal" style="padding: 18px; border-radius: 14px"><div class="dim mono" style="font-size: 11px">MÉTODOS</div><div style="margin-top: 6px; font-size: 15px">Scrum · Kanban · Git flow</div></div>
+<div class="card reveal" style="padding: 18px; border-radius: 14px"><div class="dim mono" style="font-size: 11px">DEVOPS</div><div style="margin-top: 6px; font-size: 15px">Docker · GitLab CI/CD</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="sec" style="padding-top: 40px">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 48px">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">02</span>Projetos</span>
+<h2 class="reveal h2 grad-x">Projetos que resolvem problemas reais.</h2>
+<p class="lead">Do app que organiza as compras da família ao cardápio digital que recebe pedidos pelo WhatsApp.</p>
+</div>
+
+<!-- Family Ctrl bento -->
+<div class="bento" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<div class="card reveal span2 pad-lg" style="grid-column: span 2; padding: 40px; display: flex; flex-direction: column; gap: 22px; position: relative; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+<span class="chip" style="background: #F5F5F5; color: #0A0A0A; border-color: #F5F5F5; font-weight: 600">★ Projeto principal</span>
+<span class="chip mono">Em desenvolvimento ativo</span>
+</div>
+<h3 class="grad" style="margin: 0; font-size: clamp(40px, 5vw, 64px); letter-spacing: -0.045em; font-weight: 600; line-height: 1">Family Ctrl</h3>
+<p class="lead" style="max-width: 520px">Aplicação web para gestão colaborativa de listas de supermercado em família. Todos acompanham a mesma lista, marcam o que já foi comprado e ninguém esquece o café de novo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JPA / Hibernate</span><span class="chip">API REST</span><span class="chip">SQL</span><span class="chip">[Frontend]</span>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
+<a class="btn btn-w" href="#familyctrl-demo">Ver projeto
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+<a class="btn btn-g" href="#familyctrl-github">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 22v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V22"></path></svg>Código no GitHub</a>
+</div>
+</div>
+
+<div class="card reveal" style="padding: 28px 28px 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; overflow: hidden; min-height: 420px">
+<div class="grid-bg" style="position: absolute; inset: 0; opacity: .6"></div>
+<div class="shot" style="position: relative; width: 78%; max-width: 250px; height: 400px; border-radius: 30px 30px 0 0; border: 7px solid #2A2A2A; border-bottom: none; overflow: hidden; background: #111; box-shadow: 0 -20px 60px rgba(255,255,255,.05)">
+<img src="/_blob/60e1dc6fc1841f4b039e917a15ead864" alt="Painel da família no Family Ctrl" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top">
+</div>
+<div class="glass" style="position: absolute; left: 20px; top: 24px; padding: 10px 14px; font-size: 12px; display: flex; align-items: center; gap: 8px; transform: rotate(-3deg)"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{accent}}"></span>Gastos do mês por família</div>
+</div>
+
+<div class="card reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4D4D4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M17 14.5c2.6 0 4.5 1.6 4.5 4.5"></path></svg>
+<div style="font-size: 19px; font-weight: 500; letter-spacing: -0.02em">Feito para a família inteira</div>
+<p class="muted" style="margin: 0; font-size: 14px; line-height: 1.6">Cada família tem seus membros, um administrador e um código de convite para entrar.</p>
+<div style="display: flex; margin-top: auto">
+<span style="width: 38px; height: 38px; border-radius: 50%; background: #E5E5E5; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; border: 2px solid #121212">M</span>
+<span style="width: 38px; height: 38px; border-radius: 50%; background: #9E9E9E; color: #0A0A0A; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; border: 2px solid #121212; margin-left: -10px">P</span>
+<span style="width: 38px; height: 38px; border-radius: 50%; background: #5C5C5C; color: #F5F5F5; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; border: 2px solid #121212; margin-left: -10px">J</span>
+<span style="width: 38px; height: 38px; border-radius: 50%; background: transparent; color: #BDBDBD; display: flex; align-items: center; justify-content: center; font-size: 18px; border: 1.5px dashed rgba(255,255,255,.3); margin-left: 6px; box-sizing: border-box">+</span>
+</div>
+</div>
+
+<div class="card reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4D4D4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="2"></rect><rect x="3" y="14" width="18" height="6" rx="2"></rect><path d="M7 7h.01M7 17h.01"></path></svg>
+<div style="font-size: 19px; font-weight: 500; letter-spacing: -0.02em">Backend robusto</div>
+<p class="muted" style="margin: 0; font-size: 14px; line-height: 1.6">API REST em Java com Spring Boot, persistência com JPA/Hibernate e banco relacional.</p>
+<div class="mono" style="margin-top: auto; font-size: 12px; line-height: 1.9; padding: 14px; border-radius: 10px; background: #0A0A0A; border: 1px solid rgba(255,255,255,.08); color: #BDBDBD">
+<div><span class="dim">@</span>RestController</div>
+<div><span class="dim">class</span> ListaController <span class="dim">{ … }</span></div>
+</div>
+</div>
+
+<div class="card reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4D4D4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1.5"></rect><rect x="10" y="4" width="5" height="11" rx="1.5"></rect><rect x="17" y="4" width="4" height="7" rx="1.5"></rect></svg>
+<div style="font-size: 19px; font-weight: 500; letter-spacing: -0.02em">Processo profissional</div>
+<p class="muted" style="margin: 0; font-size: 14px; line-height: 1.6">Planejado com Scrum/Kanban e boas práticas de Git, como em um time de verdade.</p>
+<div style="margin-top: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 11px" class="mono">
+<div style="display: flex; flex-direction: column; gap: 5px"><span class="dim">A FAZER</span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.06)"></span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.06)"></span></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><span class="dim">FAZENDO</span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.14)"></span></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><span class="dim">FEITO</span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.3)"></span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.3)"></span><span style="height: 22px; border-radius: 6px; background: rgba(255,255,255,.3)"></span></div>
+</div>
+</div>
+
+<div class="card reveal span2" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) 0">
+<div class="grid-bg" style="position: absolute; inset: 0"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span class="mono dim" style="font-size: 12px">NO AR · GITHUB PAGES</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Desktop e celular, com tema claro e escuro.</span></div>
+<span class="chip mono">juliowk.github.io</span>
+</div>
+<div style="position: relative; width: 80%; border-radius: 14px 14px 0 0; border: 1px solid rgba(255,255,255,.14); border-bottom: none; overflow: hidden; background: #111; box-shadow: 0 -30px 80px rgba(0,0,0,.6)" class="browser">
+<div style="height: 34px; display: flex; align-items: center; gap: 6px; padding: 0 14px; background: #1A1A1A; border-bottom: 1px solid rgba(255,255,255,.08)"><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #3A3A3A"></span></div>
+<img src="/_blob/e4cbd4564d2104c664329ee787a77375" alt="Página inicial do Family Ctrl no desktop" style="display: block; width: 100%; height: auto">
+</div>
+<div class="hide-sm" style="position: absolute; right: clamp(24px, 4vw, 48px); bottom: 0; width: 23%; max-width: 250px; border-radius: 30px 30px 0 0; border: 7px solid #2A2A2A; border-bottom: none; overflow: hidden; background: #111; box-shadow: -20px 0 60px rgba(0,0,0,.7)">
+<img src="/_blob/beb4c0409301a7a7ab87fac3afb9b5eb" alt="Tela de famílias do Family Ctrl no celular" style="display: block; width: 100%; height: auto">
+</div>
+</div>
+</div>
+
+<!-- outros projetos -->
+<div class="two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px">
+<div class="card reveal" style="overflow: hidden; display: flex; flex-direction: column">
+<div class="grid-bg" style="height: 300px; position: relative; display: flex; align-items: flex-end; justify-content: center; border-bottom: 1px solid rgba(255,255,255,.08); overflow: hidden">
+<div class="shot" style="width: 190px; height: 270px; border-radius: 28px 28px 0 0; border: 6px solid #2A2A2A; border-bottom: none; overflow: hidden; background: #141414; box-shadow: 0 -20px 60px rgba(255,255,255,.06)"><img src="/_blob/9d9620975b6973433b48d9a48e5ee2a1" alt="Cardápio do Lanche da Ana no celular" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top"></div>
+<span class="chip mono" style="position: absolute; top: 20px; left: 20px">Cliente real</span>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.03em">Lanche da Ana</h3>
+<p class="muted" style="margin: 0; font-size: 15px; line-height: 1.6">Cardápio digital mobile-first para uma lanchonete: carrinho com pedido direto pelo WhatsApp, pagamento via Pix e painel para a dona editar o cardápio sozinha. Hospedado no GitHub Pages, sem custo de servidor.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">SPA</span><span class="chip">Mobile-first</span><span class="chip">WhatsApp</span><span class="chip">Pix</span><span class="chip">GitHub Pages</span></div>
+<div style="display: flex; gap: 18px; margin-top: auto; padding-top: 10px; font-size: 14px; font-weight: 500">
+<a href="#lanche-demo" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px">Ver site <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+<a href="#lanche-github" class="muted" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px">GitHub</a>
+</div>
+</div>
+</div>
+
+<div class="card reveal" style="overflow: hidden; display: flex; flex-direction: column">
+<div class="grid-bg" style="height: 300px; position: relative; display: flex; align-items: flex-end; justify-content: center; border-bottom: 1px solid rgba(255,255,255,.08); overflow: hidden">
+<div class="shot" style="width: 190px; height: 270px; border-radius: 28px 28px 0 0; border: 6px solid #2A2A2A; border-bottom: none; overflow: hidden; background: #141414; box-shadow: 0 -20px 60px rgba(255,255,255,.06)"><img src="/_blob/3656b1c1cf1c645c5a824bfe67d6cbfb" alt="Catálogo da Kaká Trufas no celular" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top"></div>
+<span class="chip mono" style="position: absolute; top: 20px; left: 20px">Cliente real</span>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.03em">Kaká Trufas</h3>
+<p class="muted" style="margin: 0; font-size: 15px; line-height: 1.6">Catálogo de trufas artesanais: o cliente escolhe os sabores, monta a caixinha e envia o pedido pronto pelo WhatsApp, sem cadastro. O checkout separa entrega na escola e entrega em casa, e a dona controla o estoque por uma API REST com login protegido.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Mobile-first</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">NestJS</span><span class="chip">PostgreSQL</span><span class="chip">JWT</span><span class="chip">WhatsApp</span></div>
+<div style="display: flex; gap: 18px; margin-top: auto; padding-top: 10px; font-size: 14px; font-weight: 500">
+<a href="https://juliowk.github.io/Trufas/" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px">Ver site <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+<a href="https://github.com/Juliowk/Trufas" class="muted" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px">Frontend</a>
+<a href="https://github.com/Juliowk/Trufas-API" class="muted" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px">API</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- NÚMEROS -->
+<section style="position: relative; border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); overflow: hidden">
+<div class="wrap two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; align-items: center; padding-top: 100px; padding-bottom: 100px">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">03</span>Trajetória</span>
+<h2 class="reveal h2 grad-x">Experiência de mercado, não só de sala de aula.</h2>
+<p class="lead">Desde 2024 desenvolvendo software em empresas e em pesquisa na UFRN — do e-commerce ao backend com IA.</p>
+</div>
+<div class="tilt-wrap" style="position: relative; height: 380px">
+<div class="card tilt" style="position: absolute; left: 4%; top: 30px; width: 230px; padding: 26px; transform: rotate(-10deg)"><div class="chrome-text" style="font-size: 64px; font-weight: 600; letter-spacing: -0.05em; line-height: 1">2+</div><div class="muted" style="margin-top: 8px; font-size: 14px">anos desenvolvendo software</div></div>
+<div class="card tilt" style="position: absolute; left: 38%; top: 0; width: 230px; padding: 26px; transform: rotate(8deg)"><div class="chrome-text" style="font-size: 64px; font-weight: 600; letter-spacing: -0.05em; line-height: 1">3</div><div class="muted" style="margin-top: 8px; font-size: 14px">experiências profissionais</div></div>
+<div class="card tilt" style="position: absolute; left: 22%; top: 190px; width: 250px; padding: 26px; transform: rotate(-4deg)"><div class="chrome-text" style="font-size: 64px; font-weight: 600; letter-spacing: -0.05em; line-height: 1">360°</div><div class="muted" style="margin-top: 8px; font-size: 14px">backend, frontend, banco e deploy</div></div>
+</div>
+</div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" class="sec">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 48px">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">04</span>Experiência</span>
+<h2 class="reveal h2 grad-x">Onde já entreguei resultado.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div class="card reveal two" style="padding: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span class="mono dim" style="font-size: 12px">JUL 2026 — ATUAL</span><span style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Ecomsmart</span><span class="muted">Desenvolvedor de Software · Estágio</span></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><p class="muted" style="margin: 0; line-height: 1.6; font-size: 15px">Aplicações web full stack: APIs e backend em Python/Django, interfaces em Angular, TypeScript e Tailwind CSS, integração com serviços externos e soluções de Inteligência Artificial, revisão de código e deploy com Docker e GitLab CI/CD.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Django</span><span class="chip">Angular</span><span class="chip">IA</span><span class="chip">Docker</span><span class="chip">CI/CD</span></div></div>
+</div>
+<div class="card reveal two" style="padding: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span class="mono dim" style="font-size: 12px">SET 2024 — FEV 2025</span><span style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Laboratório LEIA · UFRN</span><span class="muted">Iniciação Científica</span></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><p class="muted" style="margin: 0; line-height: 1.6; font-size: 15px">Manutenção e desenvolvimento de aplicações para o modelo EV3 Lego, com foco em lógica de programação e boas práticas de desenvolvimento.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Robótica</span><span class="chip">Pesquisa</span></div></div>
+</div>
+<div class="card reveal two" style="padding: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span class="mono dim" style="font-size: 12px">JAN 2024 — JUN 2024</span><span style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em">CR84 Publicidade</span><span class="muted">Desenvolvimento de Software</span></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><p class="muted" style="margin: 0; line-height: 1.6; font-size: 15px">Desenvolvimento de um e-commerce: API em Node.js com MySQL, Knex, Multer e Cookie-parser, além de recursos de exibição dinâmica.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Node.js</span><span class="chip">MySQL</span><span class="chip">E-commerce</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STACK -->
+<section class="sec" style="padding-top: 0">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 48px">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">05</span>Stack</span>
+<h2 class="reveal h2 grad-x">Ferramentas certas para cada etapa.</h2>
+</div>
+<div class="three" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">BACKEND</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">Django REST Framework</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Node.js</span><span class="chip">NestJS</span></div></div>
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">FRONTEND</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Tailwind CSS</span></div></div>
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">DADOS &amp; APIs</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">REST</span><span class="chip">OpenAPI</span></div></div>
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">INTELIGÊNCIA ARTIFICIAL</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">APIs/SDKs de IA</span><span class="chip">Claude</span><span class="chip">MCP</span></div></div>
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">DEVOPS</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Docker</span><span class="chip">GitLab CI/CD</span><span class="chip">Git</span><span class="chip">GitHub</span></div></div>
+<div class="card reveal" style="padding: 26px; display: flex; flex-direction: column; gap: 16px"><span class="mono dim" style="font-size: 12px">MÉTODOS</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Scrum</span><span class="chip">Kanban</span><span class="chip">Code review</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="sec grid-bg" style="border-top: 1px solid rgba(255,255,255,.06)">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 56px">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">06</span>Serviços</span>
+<h2 class="reveal h2 grad">Como posso ajudar o seu negócio.</h2>
+<p class="lead">Escolha o ponto de partida. Cada projeto recebe uma proposta com escopo, prazo e valor definidos.</p>
+</div>
+<div class="two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; max-width: 880px; margin: 0 auto">
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<span class="mono dim" style="font-size: 12px">PRESENÇA ONLINE</span>
+<div style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Site ou landing page</div>
+<p class="muted" style="margin: 0; font-size: 14px; line-height: 1.6">Para negócios que precisam aparecer bem e converter visitas em contatos.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #D4D4D4"><span>✓ Design responsivo</span><span>✓ Botão de WhatsApp e formulário</span><span>✓ Publicação inclusa</span></div>
+<a class="btn btn-g" href="#contato" style="margin-top: auto">Solicitar orçamento</a>
+</div>
+<div class="card reveal" style="padding: 32px; display: flex; flex-direction: column; gap: 18px; border-radius: 20px; border-color: #FFFFFF; background: linear-gradient(180deg, #FFFFFF 0%, #DADADA 100%); color: #0A0A0A; box-shadow: 0 30px 80px rgba(255,255,255,.08)">
+<span class="mono" style="font-size: 12px; color: #4A4A4A">MAIS PROCURADO</span>
+<div style="font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Sistema web sob medida</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3A3A3A">Cardápios digitais, painéis administrativos, catálogos e ferramentas internas que automatizam a sua rotina.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #1A1A1A"><span>✓ Login e painel de gestão</span><span>✓ Banco de dados e API</span><span>✓ Entregas por etapas</span></div>
+<a class="btn" href="#contato" style="margin-top: auto; background: #0A0A0A; color: #F5F5F5; border: 1px solid #0A0A0A">Solicitar orçamento</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec">
+<div class="wrap two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: flex-start">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<span class="badge"><span class="badge-ic mono" style="font-size: 10px; font-weight: 600">07</span>FAQ</span>
+<h2 class="reveal h2 grad-x">Dúvidas frequentes.</h2>
+<p class="lead">Não encontrou o que procurava? Me chame no WhatsApp e respondo pessoalmente.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="5">
+<div class="card reveal" style="border-radius: 14px; overflow: hidden">
+<button onClick="{{f.toggle}}" style="width: 100%; min-height: 60px; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: transparent; border: none; color: #F5F5F5; font-family: inherit; font-size: 16px; font-weight: 500; text-align: left; cursor: pointer">{{f.q}}<span class="mono" style="width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 14px">{{f.icon}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{false}}"><p class="muted" style="margin: 0; padding: 0 22px 20px; font-size: 15px; line-height: 1.6">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" style="padding: 40px 0 120px">
+<div class="wrap">
+<div class="card reveal grid-bg" style="position: relative; overflow: hidden; padding: clamp(40px, 7vw, 88px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
+<span class="glyph g-mid" aria-hidden="true" style="--r: 10deg; position: absolute; right: 6%; top: 36px; opacity: .9">{ }</span>
+<span class="glyph g-sm b" aria-hidden="true" style="--r: -12deg; position: absolute; left: 7%; bottom: 44px; opacity: .8">&lt;/&gt;</span>
+<span class="badge" style="position: relative"><span class="badge-ic pulse" style="background: {{accent}}"><span style="width: 8px; height: 8px; border-radius: 50%; background: #0A0A0A"></span></span>Respondo em até [24h]</span>
+<h2 class="grad reveal" style="position: relative; margin: 0; font-size: clamp(36px, 6vw, 76px); line-height: 1; letter-spacing: -0.045em; font-weight: 500; max-width: 820px">Tem um projeto em mente? Vamos tirar do papel.</h2>
+<p class="lead" style="text-align: center">Conte o que você precisa. Eu retorno com ideias, prazo e uma proposta clara.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
+<a class="btn btn-w" href="https://wa.me/5584988510505">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"></path></svg>Chamar no WhatsApp</a>
+<a class="btn btn-g" href="mailto:julioeliasdesousarocha.wk@gmail.com">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>Enviar e-mail</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin-top: 10px; font-size: 14px" class="muted">
+<span class="mono">julioeliasdesousarocha.wk@gmail.com</span><span class="mono">(84) 98851-0505</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid rgba(255,255,255,.06); padding-top: 64px; position: relative; overflow: hidden">
+<div class="wrap foot" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; font-size: 14px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-weight: 600; font-size: 16px">Júlio Rocha</span>
+<span class="muted" style="line-height: 1.6; max-width: 280px">Desenvolvedor full stack. Sites, sistemas web, APIs e integrações com IA.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="mono dim" style="font-size: 12px">NAVEGAÇÃO</span>
+<a class="navlink" href="#sobre">Sobre</a><a class="navlink" href="#projetos">Projetos</a><a class="navlink" href="#servicos">Serviços</a><a class="navlink" href="#contato">Contato</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="mono dim" style="font-size: 12px">REDES</span>
+<a class="navlink" href="https://github.com/Juliowk">GitHub</a>
+<a class="navlink" href="https://linkedin.com/in/júlio-elias-desenvolvedor">LinkedIn</a>
+<a class="navlink" href="mailto:julioeliasdesousarocha.wk@gmail.com">E-mail</a>
+</div>
+</div>
+<div class="wrap" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 56px; font-size: 13px">
+<span class="dim">© 2026 Júlio Rocha. Todos os direitos reservados.</span>
+<a class="dim" href="#topo">Voltar ao topo ↑</a>
+</div>
+<div class="chrome-text shine-text foot-mark" style="background-image: linear-gradient(120deg,#4A4A4A 0%,#FFFFFF 18%,#8C8C8C 34%,#2B2B2B 50%,#E6E6E6 66%,#6E6E6E 82%,#D9D9D9 100%); text-align: center; font-size: clamp(64px, 15.5vw, 230px); font-weight: 700; letter-spacing: -0.06em; line-height: 0.8; margin-top: 36px; margin-bottom: -18px; white-space: nowrap">JÚLIO ROCHA</div>
+</footer>
+
+<a class="fab" href="https://wa.me/5584988510505" aria-label="Chamar no WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"></path></svg></a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#4ADE80","options":["#4ADE80","#F5F5F5","#A78BFA","#60A5FA"]},"$preview":{"width":1440,"height":9000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: 0, menu: false };
+  }
+  renderVals() {
+    const data = [
+      { q: 'Você aceita projetos freelance?', a: 'Sim. Aceito projetos com escopo e prazo bem definidos. [Ajuste conforme sua disponibilidade.]' },
+      { q: 'Quanto custa um projeto?', a: 'Depende do escopo. Depois de uma conversa rápida sobre o que você precisa, envio uma proposta com valor e prazo.' },
+      { q: 'Em quanto tempo fica pronto?', a: 'Um site simples leva menos tempo que um sistema com login e painel. O prazo exato vem definido na proposta. [Prazo médio]' },
+      { q: 'Você publica e mantém o site?', a: 'Sim. Publico o projeto e podemos combinar manutenção e ajustes depois da entrega.' },
+      { q: 'Como acompanho o andamento?', a: 'Trabalho com entregas curtas e mostro o progresso com frequência, para você validar cada etapa.' }
+    ];
+    const faqs = data.map((f, i) => ({
+      q: f.q,
+      a: f.a,
+      open: this.state.open === i,
+      icon: this.state.open === i ? '−' : '+',
+      toggle: () => this.setState({ open: this.state.open === i ? -1 : i })
+    }));
+    return {
+      accent: this.props.accent ?? '#4ADE80',
+      faqs,
+      menuOpen: this.state.menu,
+      menuIcon: this.state.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16',
+      toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      closeMenu: () => this.setState({ menu: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
