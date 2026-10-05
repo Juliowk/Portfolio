@@ -4,13 +4,13 @@
 
 Portfólio profissional que funciona como um segundo currículo e leva donos de empresas a me contratar. O CTA principal é o WhatsApp (`https://wa.me/5584988510505`).
 
-Publicado em `https://juliowk.github.io/` (repositório de usuário `Juliowk/juliowk.github.io`), com deploy automático via GitHub Actions a cada push na `main`.
+Publicado em `https://juliowk.github.io/Portfolio/` (repositório `Juliowk/Portfolio`), com deploy automático via GitHub Actions a cada push na `main`.
 
 ## Stack
 
 - Vite + TypeScript vanilla (sem frameworks)
 - CSS puro com variáveis (design tokens), sem bibliotecas de animação
-- `vite.config.ts` com `base: '/'` (site servido na raiz)
+- `vite.config.ts` com `base: '/Portfolio/'` (site servido em /Portfolio/); caminhos em `public/` referenciados no HTML como `/images/...` são reescritos pelo Vite, mas links `<a>` para arquivos de `public/` devem ser relativos
 
 ## Estrutura
 
