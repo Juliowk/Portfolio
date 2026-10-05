@@ -1,1 +1,355 @@
-/* motion */
+/* Motion: keyframes, entradas, reveal na rolagem e hovers. Só transform, opacity e filter. */
+
+@keyframes fu {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(calc(var(--r, 0deg) + 2deg));
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 220% 50%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 26ch;
+  }
+}
+
+/* Usa translate/scale individuais para não brigar com o transform do hover */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 48px;
+    scale: 0.97;
+  }
+  to {
+    opacity: 1;
+    translate: none;
+    scale: none;
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 1. Entrada do hero em cascata */
+.fu {
+  animation: fu 1s var(--ease-out) both;
+}
+
+.d1 {
+  animation-delay: 0.08s;
+}
+
+.d2 {
+  animation-delay: 0.2s;
+}
+
+.d3 {
+  animation-delay: 0.32s;
+}
+
+.d4 {
+  animation-delay: 0.44s;
+}
+
+.d5 {
+  animation-delay: 0.7s;
+}
+
+/* 2. Símbolos cromados e órbitas */
+.glyph {
+  animation:
+    floaty 8s ease-in-out infinite,
+    shine 7s linear infinite;
+  will-change: transform;
+}
+
+.glyph.b {
+  animation-duration: 10s, 9s;
+  animation-delay: -4s, -2s;
+}
+
+.orbit {
+  animation: spin 36s linear infinite;
+}
+
+.orbit.rev {
+  animation-duration: 54s;
+  animation-direction: reverse;
+}
+
+/* 3. Terminal e indicador de disponível */
+.pulse {
+  animation: pulse 2s ease-out infinite;
+}
+
+.blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  animation: type 1.4s steps(26) 1s both;
+}
+
+/* 4. Letreiro de tecnologias */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee {
+  animation: marquee 34s linear infinite;
+}
+
+.marquee-mask:hover .marquee {
+  animation-play-state: paused;
+}
+
+/* 5. Reveal na rolagem (sem suporte, o conteúdo aparece normal) */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 24%;
+  }
+}
+
+/* Fallback via IntersectionObserver (main.ts adiciona .io-reveal no <html>) */
+.io-reveal .reveal {
+  opacity: 0;
+  translate: 0 48px;
+  scale: 0.97;
+  transition:
+    opacity 0.8s var(--ease-out),
+    translate 0.8s var(--ease-out),
+    scale 0.8s var(--ease-out);
+}
+
+.io-reveal .reveal.is-visible {
+  opacity: 1;
+  translate: none;
+  scale: none;
+}
+
+/* Menu mobile */
+.menu-panel:not([hidden]) {
+  animation: drop 0.3s ease both;
+}
+
+/* 6. Hovers */
+.card {
+  transition:
+    transform 0.45s var(--ease-out),
+    border-color 0.45s,
+    box-shadow 0.45s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--line-hover);
+  box-shadow: var(--shadow-inset-hover), var(--shadow-lift);
+}
+
+.card.service--featured:hover {
+  border-color: var(--text-strong);
+  box-shadow: 0 30px 80px var(--fill-4), var(--shadow-lift);
+}
+
+.tilt {
+  transition:
+    transform 0.5s var(--ease-out),
+    border-color 0.5s;
+}
+
+.card.tilt:hover {
+  transform: rotate(var(--rot));
+  border-color: var(--line-hover);
+}
+
+.shot img {
+  transition: transform 0.8s var(--ease-out);
+}
+
+.card:hover .shot img {
+  transform: scale(1.04);
+}
+
+.btn {
+  transition:
+    transform 0.25s var(--ease-out),
+    background-color 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn svg {
+  transition: transform 0.25s;
+}
+
+.btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.btn-w:hover {
+  box-shadow:
+    0 0 0 6px var(--fill-5),
+    0 12px 30px var(--fill-4);
+}
+
+.btn-g:hover {
+  border-color: var(--line-strong);
+  background: var(--fill-4);
+}
+
+.text-link svg {
+  transition: transform 0.25s;
+}
+
+.text-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.chip {
+  transition:
+    background-color 0.25s,
+    border-color 0.25s,
+    color 0.25s;
+}
+
+.chip:hover {
+  background: var(--fill-5);
+  border-color: var(--line-hover);
+  color: var(--text-strong);
+}
+
+.chip--solid:hover {
+  background: var(--text-strong);
+  color: var(--text-on-light);
+}
+
+.navlink {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navlink:hover {
+  color: var(--text-strong);
+}
+
+.navlink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.navlink:hover::after,
+.navlink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* 7. Wordmark do rodapé com brilho percorrendo */
+.shine-text {
+  background-size: 220% 100%;
+  animation: shine 8s linear infinite;
+}
+
+/* 8. Movimento reduzido: página estática e legível */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .io-reveal .reveal {
+    opacity: 1;
+    translate: none;
+    scale: none;
+  }
+
+  .typing {
+    width: auto;
+  }
+}

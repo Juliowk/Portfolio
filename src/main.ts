@@ -21,7 +21,28 @@ function initYear(): void {
   if (year) year.textContent = String(new Date().getFullYear());
 }
 
+// Reveal na rolagem para navegadores sem animation-timeline: view().
+function initRevealFallback(): void {
+  if (CSS.supports('animation-timeline: view()')) return;
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.documentElement.classList.add('io-reveal');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px -10% 0px' },
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+}
+
 initMenu();
 initFaq();
 initHeaderScroll();
 initYear();
+initRevealFallback();
