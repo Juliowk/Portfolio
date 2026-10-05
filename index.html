@@ -4,18 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Júlio Rocha | Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Júlio Rocha, desenvolvedor full stack. Sites, sistemas web e APIs com Python/Django, Angular e Java/Spring Boot, com integração de Inteligência Artificial."
+    />
+    <meta name="author" content="Júlio Rocha" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="canonical" href="https://juliowk.github.io/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Júlio Rocha" />
+    <meta property="og:title" content="Júlio Rocha | Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Sites, sistemas web e APIs com Python/Django, Angular e Java/Spring Boot — com Inteligência Artificial onde ela gera resultado de verdade."
+    />
+    <meta property="og:url" content="https://juliowk.github.io/" />
+    <meta property="og:image" content="https://juliowk.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Júlio Rocha — Desenvolvedor Full Stack" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Júlio Rocha | Desenvolvedor Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Sites, sistemas web e APIs com Python/Django, Angular e Java/Spring Boot — com Inteligência Artificial onde ela gera resultado de verdade."
+    />
+    <meta name="twitter:image" content="https://juliowk.github.io/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Júlio Rocha",
+        "alternateName": "Júlio Elias de Sousa Rocha",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "url": "https://juliowk.github.io/",
+        "image": "https://juliowk.github.io/og-image.png",
+        "email": "mailto:julioeliasdesousarocha.wk@gmail.com",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Rio Grande do Norte (UFRN)" },
+        "knowsAbout": ["Python", "Django", "Angular", "TypeScript", "Java", "Spring Boot", "NestJS", "React", "PostgreSQL", "Docker", "Inteligência Artificial"],
+        "sameAs": [
+          "https://github.com/Juliowk",
+          "https://www.linkedin.com/in/j%C3%BAlio-elias-desenvolvedor"
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fontes carregadas sem bloquear a renderização -->
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <!-- NAV -->
     <header class="site-header fu" id="header">
       <div class="wrap header-bar">
-        <a href="#topo" class="brand" aria-label="Júlio Rocha — início">
+        <a href="#topo" class="brand">
           <span class="brand-mark mono" aria-hidden="true">JR</span>
           Júlio Rocha
         </a>
@@ -56,7 +119,7 @@
       </nav>
     </header>
 
-    <main id="conteudo">
+    <main id="conteudo" tabindex="-1">
       <!-- HERO -->
       <section id="topo" class="hero grid-bg" aria-labelledby="hero-title">
         <div class="hero-halo" aria-hidden="true"></div>
@@ -142,14 +205,17 @@
       <section id="sobre" class="sec" aria-labelledby="sobre-title">
         <div class="wrap two about-grid">
           <figure class="card reveal about-photo">
-            <img
-              src="/images/julio.jpg"
-              alt="Foto de Júlio Rocha, desenvolvedor full stack, em preto e branco"
-              width="920"
-              height="1150"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source srcset="/images/julio.webp" type="image/webp" />
+              <img
+                src="/images/julio.jpg"
+                alt="Foto de Júlio Rocha, desenvolvedor full stack, em preto e branco"
+                width="920"
+                height="1150"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <div class="about-photo-fade" aria-hidden="true"></div>
             <figcaption class="glass about-tag">
               <span class="label-xs">ATUALMENTE</span>
@@ -219,7 +285,7 @@
               <div class="grid-bg grid-layer fc-phone-grid" aria-hidden="true"></div>
               <div class="phone shot fc-phone">
                 <img
-                  src="/images/family-painel.jpg"
+                  src="/images/family-painel.webp"
                   alt="Painel da família no Family Ctrl, no celular"
                   width="500"
                   height="1000"
@@ -275,7 +341,7 @@
               <div class="browser showcase-browser">
                 <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div></div>
                 <img
-                  src="/images/family-desktop.jpg"
+                  src="/images/family-desktop.webp"
                   alt="Página inicial do Family Ctrl no desktop"
                   width="1800"
                   height="1013"
@@ -285,7 +351,7 @@
               </div>
               <div class="phone hide-sm showcase-phone">
                 <img
-                  src="/images/family-familias.jpg"
+                  src="/images/family-familias.webp"
                   alt="Tela de famílias do Family Ctrl no celular"
                   width="500"
                   height="1000"
@@ -302,7 +368,7 @@
               <div class="grid-bg project-stage">
                 <div class="phone phone--sm shot project-phone">
                   <img
-                    src="/images/lanche-mobile.jpg"
+                    src="/images/lanche-mobile.webp"
                     alt="Cardápio do Lanche da Ana no celular"
                     width="380"
                     height="760"
@@ -339,7 +405,7 @@
               <div class="grid-bg project-stage">
                 <div class="phone phone--sm shot project-phone">
                   <img
-                    src="/images/kaka-mobile.jpg"
+                    src="/images/kaka-mobile.webp"
                     alt="Catálogo da Kaká Trufas no celular"
                     width="380"
                     height="760"
