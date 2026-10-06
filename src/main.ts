@@ -7,13 +7,27 @@ import './styles/responsive.css';
 
 import { initMenu } from './menu';
 import { initFaq } from './faq';
+import { initMotion } from './motion';
 
+// Header ganha fundo ao rolar e se esconde ao descer (volta ao subir ou ao receber foco).
 function initHeaderScroll(): void {
   const header = document.querySelector<HTMLElement>('#header');
   if (!header) return;
-  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lastY = window.scrollY;
+
+  const update = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 8);
+    if (!reduced && Math.abs(y - lastY) > 6) {
+      const keepVisible = document.body.classList.contains('menu-open') || header.contains(document.activeElement);
+      header.classList.toggle('is-hidden', y > lastY && y > 320 && !keepVisible);
+      lastY = y;
+    }
+  };
   update();
   window.addEventListener('scroll', update, { passive: true });
+  header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
 }
 
 function initYear(): void {
@@ -46,3 +60,4 @@ initFaq();
 initHeaderScroll();
 initYear();
 initRevealFallback();
+initMotion();
